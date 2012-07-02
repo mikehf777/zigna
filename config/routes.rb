@@ -14,6 +14,8 @@ Zigna::Application.routes.draw do
   match "mkt" => "pages#mkt"
   match "portfolio" => "pages#portfolio"
   match "contact" => "messages#new"
+  match 'message' => 'messages#new', :as => 'message', :via => :get
+  match 'message' => 'messages#create', :as => 'message', :via => :post
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

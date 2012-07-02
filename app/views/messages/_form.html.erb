@@ -3,7 +3,7 @@
 llene los siguientes campos a continuación: 
 </p>
 <%= render "shared/alerts" %>
-<%= form_for(@message) do |f| %>
+<%= form_for @message, :url => message_path do |f| %>
   <% if @message.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@message.errors.count, "error") %> prohibited this message from being saved:</h2>

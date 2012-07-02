@@ -5,9 +5,8 @@ class Message
 
   attr_accessor :nombre, :email, :asunto, :mensaje
  
-  validates_presence_of :nombre
-  validates_format_of :email, :with => /^[-a-z0-9_+\.]+\@([-a-z0-9]+\.)+[a-z0-9]{2,4}$/i
-  validates_length_of :mensaje, :maximum => 500
+  validates :nombre, :email, :asunto, :mensaje, :presence => true
+  validates :email, :format => { :with => %r{.+@.+\..+} }, :allow_blank => true
   
   def initialize(attributes = {})
     attributes.each do |nombre, value|
@@ -18,5 +17,5 @@ class Message
   def persisted?
     false
   end
-  
+
 end
