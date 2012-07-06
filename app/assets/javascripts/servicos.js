@@ -1,0 +1,5 @@
+$(function() 
+{
+$('#ca-container').contentcarousel();
+				
+});

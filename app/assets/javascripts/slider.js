@@ -1,0 +1,5 @@
+$(function() 
+{
+	$('#da-slider').cslider();
+				
+});

@@ -1,0 +1,21 @@
+<%= render "header"%>
+<div class="container">
+	<div class="services">
+		<h1 class="title">Menú de Servicios</h1>
+		<div class="line line-short line-about-big"></div>
+		<nav class="services-menu">
+			<ul>
+				<li><%= link_to "Diseño Web",  web_design_path(format:  :js) , remote: true , class: " web active"  %></li>
+				<li><%= link_to " Sistemas Web", web_develop_path(format:  :js) , remote: true , class: "botton-service develop" %></li>
+				<li><%= link_to "Diseño Gráfico", web_grafic_path(format:  :js) , remote: true , class: "botton-service grafico" %></li>
+				<li><%= link_to "Imagen Corporativa", image_path(format:  :js) , remote: true , class: "botton-service small imagen"%></li>
+				<li><%= link_to "Multimedia", multimedia_path(format:  :js) , remote: true , class: "botton-service multimedia" %></li>
+				<li><%= link_to "Marketing Online", online_path(format:  :js) , remote: true , class: "botton-service small online" %></li>
+				<li><%= link_to "   Marketing", mkt_path(format:  :js) , remote: true , class: "botton-service mkt big" %></li>
+			</ul>
+		</nav>
+		<div class="content">
+			<%= render(:file => 'pages/web') %>
+		</div>
+	</div>
+</div>

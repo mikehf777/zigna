@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zigna </title>
+  <%= render "layouts/styles" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="container">	
+	<%= render "layouts/menu" %>
+	<%= render "layouts/socialmedia"%>
+</div>
+<%= yield %>
+<%= render "layouts/footer" %>
+<%= render "layouts/footer-menu" %>
+</body>
+</html>

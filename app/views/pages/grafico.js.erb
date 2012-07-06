@@ -1,0 +1,6 @@
+$(document).ready(function() {
+$('.content').empty();
+$('.content').html("<%= escape_javascript render(:file => 'pages/grafico', :formats => [:html])  %>");    
+$('.grafico').addClass("active").removeClass("botton-service");
+$('.services-menu ul li a').not('.grafico').addClass("botton-service").removeClass("actvive");
+});
