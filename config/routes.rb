@@ -11,6 +11,7 @@ Zigna::Application.routes.draw do
   match 'online' => "pages#online"
   match "mkt" => "pages#mkt"
   match "portfolio" => "pages#portfolio"
+  match "contact" => "pages#contacto"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -12,6 +12,10 @@ def services
 @titulo="SERVICIOS"
 end
 
+def contacto
+@titulo="CONTACTO" 
+end
+
 def web
  respond_to do |format|
       format.js
