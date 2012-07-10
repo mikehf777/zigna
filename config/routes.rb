@@ -1,5 +1,7 @@
 Zigna::Application.routes.draw do
 
+  resources :messages
+
   root to: "pages#home"
   match 'services' => 'pages#services'
   match 'about' => "pages#about"
@@ -11,7 +13,7 @@ Zigna::Application.routes.draw do
   match 'online' => "pages#online"
   match "mkt" => "pages#mkt"
   match "portfolio" => "pages#portfolio"
-  match "contact" => "pages#contacto"
+  match "contact" => "messages#new"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

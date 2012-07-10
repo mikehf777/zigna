@@ -1,0 +1,37 @@
+<div class="message">
+  <p class="text">Si usted desea ponerse en contacto con nosotros para alguna cita o dejar un comentario 
+llene los siguientes campos a continuación: 
+</p>
+<%= form_for(@message) do |f| %>
+  <% if @message.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@message.errors.count, "error") %> prohibited this message from being saved:</h2>
+
+      <ul>
+      <% @message.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :nombre , class: "form_text text" %><br />
+    <%= f.text_field :nombre , class: "form_box" %>
+  </div>
+  <div class="field">
+    <%= f.label :email , class: "form_text text" %><br />
+    <%= f.text_field :email , class: "form_box" %>
+  </div>
+  <div class="field">
+    <%= f.label :asunto , class: "form_text text" %><br />
+    <%= f.text_field :asunto , class: "form_box" %>
+  </div>
+  <div class="field">
+    <%= f.label :mensaje , class: "form_text text" %><br />
+    <%= f.text_area :mensaje , class: "form_textarea" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Enviar" , class: "form_botton"%>
+  </div>
+<% end %>
+</div>
