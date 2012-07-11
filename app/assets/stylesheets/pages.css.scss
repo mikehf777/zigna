@@ -234,7 +234,7 @@ header{
 	top: 70px;
 	bottom:1px;
 	right: 2%;
-	z-index: 100000;
+	z-index: 1;
 	width: 37px;
 	a{
 		margin-top: 4px;
@@ -275,6 +275,7 @@ header{
 	.text-about{
 		width: 685px;
 		text-align: justify;
+		margin-bottom: 33px;
 		span{
 			font-weight: bold;
 		}
@@ -290,7 +291,7 @@ header{
 .column{
 	width: 365px;
 	text-align: justify;
-	margin-bottom: 20px;
+	margin-bottom: 61px;
 	span{
 			font-weight: bold;
 		}
@@ -328,7 +329,8 @@ ul{
 			background-image: url("black_button.png");
 			background-repeat: no-repeat;
 			text-align: center;
-				font-weight: bold;
+			font-weight: bold;
+			outline: none;
 			text-decoration: none;
 			font-size: 18px;
 			padding: 15px 79px 25px 27px ;
@@ -338,6 +340,7 @@ ul{
 
 			background-image: url("blue_button.png");
 			background-repeat: no-repeat;
+			outline: none;
 			color:white;
 
 		}
