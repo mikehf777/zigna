@@ -296,12 +296,13 @@ header{
 }
 /*Css de Nosotros*/
 .brain{
-	margin-left: 933px;
+	float: right;
+	width:  28.4375%; /* 273 / 960 */
 }
 .center_about{
-	margin-top:-375px;
+	float:left;
+	width:  71.35416666666666%;
 	.text-about{
-		width: 685px;
 		text-align: justify;
 		margin-bottom: 33px;
 		span{
@@ -317,23 +318,23 @@ header{
 	width:959px;
 }
 .column{
-	width: 365px;
+	width: 100%;
 	text-align: justify;
-	margin-bottom: 61px;
+	margin-bottom: 18.208955223880596%; /* 61 / 335 */
 	span{
 			font-weight: bold;
 		}
 }
-.about-column{
 	.column_left{
-		width: 365px;
+		float:left;
+		width:  48%;
 	}
 	.column_right{
-		width: 365px;
-		margin-left: 454px;
-		margin-top: -289px;
+		float: right;
+		width: 48%;
+		/*margin-left: 454px;
+		margin-top: -289px;*/
 	}
-}
 /*Servicos*/
 .services{  /*Contenedor pricipal de servicios*/
 
