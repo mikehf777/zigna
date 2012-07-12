@@ -2,6 +2,7 @@
   <p class="text">Si usted desea ponerse en contacto con nosotros para alguna cita o dejar un comentario 
 llene los siguientes campos a continuación: 
 </p>
+<%= render "shared/alerts" %>
 <%= form_for(@message) do |f| %>
   <% if @message.errors.any? %>
     <div id="error_explanation">

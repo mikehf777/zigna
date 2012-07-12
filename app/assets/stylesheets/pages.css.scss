@@ -5,6 +5,13 @@ $gray: #666;
 $gris: #f9f9f9;
 $gris-foot: #6d6e71;
 $gris-content: #414042;
+
+@mixin border-radius($radio) {
+    -moz-border-radius: $radio;
+    -webkit-border-radius: $radio;
+    border-radius: $radio;
+}
+
 body{
 	/*width:1024px;*/
 	margin:auto;
@@ -206,6 +213,9 @@ header{
 	h4{
 		color:$blue;
 
+	}
+	div{
+		padding: 7px;
 	}
 }
 
@@ -444,10 +454,17 @@ margin-left: 2px;
 		}
 		.contacto-text{
 			margin-left: 85px;
+			padding: 8px;
 			
 		}
 		.contacto-img{
 			margin-top: 20px;
 			height: 50px;
 		}
+}
+.flash-success{
+	background-color: $blue;
+	padding: 9px;
+	@include border-radius(12px);
+	color: $gris;
 }

@@ -30,10 +30,8 @@
 		<div class="col span_1_of_3">
 			<div class="twitter-footer">
 				<h3>Último tweet</h3>
-				<% cache "twitter-footer#{Date.today}"	do %>
 				<%  t = Twitter.user_timeline("zignacreativa").first %>
-				<div><h4>@<%= t.user.screen_name %></h4><%= t.text %></div>
-			<% end %>
+				<div><h4>@<%= t.user.screen_name %></h4><%= t.text %><h4><%=  t.created_at.strftime("%I:%M %p") %></h4></div>
 			</div>
 		</div>
 	</div>
