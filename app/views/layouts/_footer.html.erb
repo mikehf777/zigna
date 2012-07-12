@@ -5,25 +5,37 @@
 <div class="container">
 	<div class="section group">
 		<div class="col span_1_of_3">
-		<h3 class="foot-header">Contactanos</h3>
+		<h3>Contáctanos</h3>
 		<p>
-			SM. 22 MZA. MZA 2 Retorno</br>
-			Azucenas #16</br>
+			SM. 22 Retorno Azucenas #16</br>
 			Teléfono: (998) 253.83.53</br>
 			<a href="mailto:info@zignacreativa.com">info@zignacreativa.com</a>
 		</p>
 		</div>
 		<div class="col span_1_of_3">
-		<h3 class="foot-header">Tags</h3>
-		<p class="gray">Diseño Web</br>
-			Imagen Corporativa</br>
-			Diseño Gráfico</br>
-			Marketing Online</br>
-			Multimedia</br>
-			CEO y SEM </br>
-		</p> 
+			<div class="tags">
+				<h3>Tags</h3>
+				<div class="half">
+					<%= link_to "Diseño Web", services_path %><br>
+					<%= link_to "Imagen Corporativa", services_path %><br>
+					<%= link_to "Diseño Gráfico", services_path %><br>
+				</div>
+				<div class="half">
+					<%= link_to "Marketing Online", services_path %><br>
+					<%= link_to "Multimedia", services_path %><br>
+					<%= link_to "CEO y SEM", services_path %><br>
+				</div>
+			</div>
 		</div>
 		<div class="col span_1_of_3">
+			<div class="twitter-footer">
+				<h3>Último tweet</h3>
+				<% cache "twitter-footer#{Date.today}"	do %>
+				<%  t = Twitter.user_timeline("zignacreativa").first %>
+				<div><h4>@<%= t.user.screen_name %></h4><%= t.text %></div>
+			<% end %>
+			</div>
+		</div>
 	</div>
 </div>
 </footer>
