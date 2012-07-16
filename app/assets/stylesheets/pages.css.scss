@@ -302,6 +302,7 @@ header{
 .center_about{
 	float:left;
 	width:  71.35416666666666%;
+	margin-top: 2.0895522388059702%; /* 14 / 670 */;
 	.text-about{
 		text-align: justify;
 		margin-bottom: 33px;
@@ -371,6 +372,7 @@ ul{
 			background-repeat: no-repeat;
 			outline: none;
 			color:white;
+			list-style-type: none;
 
 		}
 		.small{
